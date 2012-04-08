@@ -1,0 +1,604 @@
+<html>
+<head><title>rt4x4MatrixToTRS node</title>
+</head>
+<body bgcolor="white">
+
+<div id="banner"><p id="super">
+
+<b>Nodes</b></p><h1>rt4x4MatrixToTRS</h1></div><p class="toolbar" align="right"></p><p><mayadoc-description>
+
+  This node has a 4x4 matrix input based on 16 float values. The matrix is output as Translate, Rotate, and Scale.<p/>
+
+  The first row of the matrix is defined by in00, in01, in02, in03.<br/>
+  The 2nd row of the matrix is defined by in10, in11, in12, in13.<br/>
+  The 3rd row of the matrix is defined by in20, in21, in22, in23.<br/>
+  The 4th row of the matrix is defined by in30, in31, in32, in33.
+
+</mayadoc-description></p><table border="0" width="100%" bgcolor="#CCCCCC" cellspacing="1" cellpadding="4"><tr><th>Node name</th><th>Parents</th><th>Classification</th><th>MFn type</th><th>Compatible function sets</th></tr>
+
+<tr><td valign="top" bgcolor="white">rt4x4MatrixToTRS</td>
+<td valign="top" bgcolor="white">dependNode</td>
+<td valign="top" bgcolor="white">utility/general</td>
+<td valign="top" bgcolor="white"></td>
+<td valign="top" bgcolor="white"></td></tr></table>
+
+
+<h2>Attributes (37)</h2><p>
+
+<a href="#attrin00">in00</a>,
+<a href="#attrin01">in01</a>,
+<a href="#attrin02">in02</a>,
+<a href="#attrin03">in03</a>,
+<a href="#attrin10">in10</a>,
+<a href="#attrin11">in11</a>,
+<a href="#attrin12">in12</a>,
+<a href="#attrin13">in13</a>,
+<a href="#attrin20">in20</a>,
+<a href="#attrin21">in21</a>,
+<a href="#attrin22">in22</a>,
+<a href="#attrin23">in23</a>,
+<a href="#attrin30">in30</a>,
+<a href="#attrin31">in31</a>,
+<a href="#attrin32">in32</a>,
+<a href="#attrin33">in33</a>,
+<a href="#attrparentInverseMatrix">parentInverseMatrix</a>,
+<a href="#attrnormalize">normalize</a>,
+<a href="#attreulerRotateOrder">eulerRotateOrder</a>,
+<a href="#attroutputTranslateX">outputTranslateX</a>,
+<a href="#attroutputTranslateY">outputTranslateY</a>,
+<a href="#attroutputTranslateZ">outputTranslateZ</a>,
+<a href="#attroutputRotateX">outputRotateX</a>,
+<a href="#attroutputRotateY">outputRotateY</a>,
+<a href="#attroutputRotateZ">outputRotateZ</a>,
+<a href="#attroutputScaleX">outputScaleX</a>,
+<a href="#attroutputScaleY">outputScaleY</a>,
+<a href="#attroutputScaleZ">outputScaleZ</a>,
+<a href="#attroffsetTranslateX">offsetTranslateX</a>,
+<a href="#attroffsetTranslateY">offsetTranslateY</a>,
+<a href="#attroffsetTranslateZ">offsetTranslateZ</a>,
+<a href="#attroffsetRotateX">offsetRotateX</a>,
+<a href="#attroffsetRotateY">offsetRotateY</a>,
+<a href="#attroffsetRotateZ">offsetRotateZ</a>,
+<a href="#attroffsetScaleX">offsetScaleX</a>,
+<a href="#attroffsetScaleY">offsetScaleY</a>,
+<a href="#attroffsetScaleZ">offsetScaleZ</a>
+</p>
+
+<table border="0" width="100%">
+<tr><th bgcolor="#CCCCCC" width="50%">Long name (short name)</th>
+<th bgcolor="#CCCCCC" width="10%">Type</th>
+<th bgcolor="#CCCCCC" width="20%">Default</th>
+<th bgcolor="#CCCCCC" width="20%">Flags</th></tr>
+<tr><td colspan="4"/></tr>
+
+
+
+<tr><td colspan="4"/></tr>
+<tr bgcolor="#EEEEEE">
+<td class="attrName" width="50%" valign="top"><a name="attroutput"/><b>
+<code>matrixIn</code></b>
+(<b><code>mi</code></b>)</td>
+<td class="attrType" width="10%" valign="top">compound</td>
+<td class="attrType" width="20%" valign="top">n/a</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		bundle of matrix input values
+		</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin00"/>
+				<b><code>in00</code></b>
+				(<b><code>i00</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[0][0]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin01"/>
+				<b><code>in01</code></b>
+				(<b><code>i01</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[0][1]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin02"/>
+				<b><code>in02</code></b>
+				(<b><code>i02</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[0][2]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin03"/>
+				<b><code>in03</code></b>
+				(<b><code>i03</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[0][3]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin10"/>
+				<b><code>in10</code></b>
+				(<b><code>i10</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[1][0]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin11"/>
+				<b><code>in11</code></b>
+				(<b><code>i11</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[1][1]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin12"/>
+				<b><code>in12</code></b>
+				(<b><code>i12</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[1][2]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin13"/>
+				<b><code>in13</code></b>
+				(<b><code>i13</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[1][3]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin20"/>
+				<b><code>in20</code></b>
+				(<b><code>i20</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[2][0]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin21"/>
+				<b><code>in21</code></b>
+				(<b><code>i21</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[2][1]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin22"/>
+				<b><code>in22</code></b>
+				(<b><code>i22</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[2][2]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin23"/>
+				<b><code>in23</code></b>
+				(<b><code>i23</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[2][3]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin30"/>
+				<b><code>in30</code></b>
+				(<b><code>i30</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[3][0]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin31"/>
+				<b><code>in31</code></b>
+				(<b><code>i31</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[3][1]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin32"/>
+				<b><code>in32</code></b>
+				(<b><code>i32</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[3][2]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrin33"/>
+				<b><code>in33</code></b>
+				(<b><code>i33</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">double</td>
+				<td class="attrType" width="20%" valign="top">1.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				matrix[3][3]
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrparentInverseMatrix"/>
+<b><code>parentInverseMatrix</code></b>
+(<b><code>pim</code></b>)</td>
+<td class="attrType" width="10%" valign="top">matrix</td>
+<td class="attrType" width="20%" valign="top">identity</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%">
+<tr><td width="5%"/><td><mayadoc-comment>
+inverse of the parent matrix of the object
+</mayadoc-comment></td></tr></table></td></tr>
+
+<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attrnormalize"/>
+<b><code>normalize</code></b>
+(<b><code>n</code></b>)</td>
+<td class="attrType" width="10%" valign="top">bool</td>
+<td class="attrType" width="20%" valign="top">0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%">
+<tr><td width="5%"/><td><mayadoc-comment>
+Whether rotation vectors of input matrix should be normalized or not.
+</mayadoc-comment></td></tr></table></td></tr>
+
+<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attreulerRotateOrder"/>
+<b><code>eulerRotateOrder</code></b>
+(<b><code>ero</code></b>)</td>
+<td class="attrType" width="10%" valign="top">enum</td>
+<td class="attrType" width="20%" valign="top">0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%">
+<tr><td width="5%"/><td><mayadoc-comment>
+Input target object rotate order value.
+</mayadoc-comment></td></tr></table></td></tr>
+
+<tr><td colspan="4"/></tr><tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="none"/><b>
+<code>outputTranslate</code></b>
+(<b><code>ot</code></b>)</td>
+<td class="attrType" width="10%" valign="top">float3</td>
+<td class="attrType" width="20%" valign="top">0.0, 0.0, 0.0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		<b>outputTranslate</b>
+		</mayadoc-comment></td></tr></table></td></tr>
+
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputTranslateX"/>
+				<b><code>outputTranslateX</code></b>
+				(<b><code>otx</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The x component of outputTranslate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputTranslateY"/>
+				<b><code>outputTranslateY</code></b>
+				(<b><code>oty</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The y component of outputTranslate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputTranslateZ"/>
+				<b><code>outputTranslateZ</code></b>
+				(<b><code>otz</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The z component of outputTranslate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+
+<tr><td colspan="4"/></tr><tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="none"/><b>
+<code>outputRotate</code></b>
+(<b><code>or</code></b>)</td>
+<td class="attrType" width="10%" valign="top">float3</td>
+<td class="attrType" width="20%" valign="top">0.0, 0.0, 0.0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		<b>outputRotate</b>
+		</mayadoc-comment></td></tr></table></td></tr>
+
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputRotateX"/>
+				<b><code>outputRotateX</code></b>
+				(<b><code>orx</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The x component of outputRotate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputRotateY"/>
+				<b><code>outputRotateY</code></b>
+				(<b><code>ory</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The y component of outputRotate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputRotateZ"/>
+				<b><code>outputRotateZ</code></b>
+				(<b><code>orz</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The z component of outputRotate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+
+<tr><td colspan="4"/></tr><tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="none"/><b>
+<code>outputScale</code></b>
+(<b><code>os</code></b>)</td>
+<td class="attrType" width="10%" valign="top">float3</td>
+<td class="attrType" width="20%" valign="top">0.0, 0.0, 0.0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		<b>outputScale</b>
+		</mayadoc-comment></td></tr></table></td></tr>
+
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputScaleX"/>
+				<b><code>outputScaleX</code></b>
+				(<b><code>osx</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The x component of outputScale
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputScaleY"/>
+				<b><code>outputScaleY</code></b>
+				(<b><code>osy</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The y component of outputScale
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroutputScaleZ"/>
+				<b><code>outputScaleZ</code></b>
+				(<b><code>osz</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The z component of outputScale
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+<tr><td colspan="4"/></tr><tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="none"/><b>
+<code>offsetTranslate</code></b>
+(<b><code>oft</code></b>)</td>
+<td class="attrType" width="10%" valign="top">float3</td>
+<td class="attrType" width="20%" valign="top">0.0, 0.0, 0.0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		<b>offsetTranslate</b>
+		</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetTranslateX"/>
+				<b><code>offsetTranslateX</code></b>
+				(<b><code>oftx</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The x component of offsetTranslate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetTranslateY"/>
+				<b><code>offsetTranslateY</code></b>
+				(<b><code>ofty</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The y component of offsetTranslate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetTranslateZ"/>
+				<b><code>offsetTranslateZ</code></b>
+				(<b><code>oftz</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The z component of offsetTranslate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+<tr><td colspan="4"/></tr><tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="none"/><b>
+<code>offsetRotate</code></b>
+(<b><code>ofr</code></b>)</td>
+<td class="attrType" width="10%" valign="top">float3</td>
+<td class="attrType" width="20%" valign="top">0.0, 0.0, 0.0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		<b>offsetRotate</b>
+		</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetRotateX"/>
+				<b><code>offsetRotateX</code></b>
+				(<b><code>ofrx</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The x component of offsetRotate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetRotateY"/>
+				<b><code>offsetRotateY</code></b>
+				(<b><code>ofry</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The y component of offsetRotate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetRotateZ"/>
+				<b><code>offsetRotateZ</code></b>
+				(<b><code>ofrz</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The z component of offsetRotate
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+
+<tr><td colspan="4"/></tr>
+<tr bgcolor="#EEEEEE">
+<td class="attrName" width="50%" valign="top"><a name="none"/><b>
+<code>offsetScale</code></b>
+(<b><code>ofs</code></b>)</td>
+<td class="attrType" width="10%" valign="top">float3</td>
+<td class="attrType" width="20%" valign="top">0.0, 0.0, 0.0</td>
+<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+		<b>offsetScale</b>
+		</mayadoc-comment></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetScaleX"/>
+				<b><code>offsetScaleX</code></b>
+				(<b><code>ofsx</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The x component of offsetScale
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetScaleY"/>
+				<b><code>offsetScaleY</code></b>
+				(<b><code>ofsy</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The y component of offsetScale
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+		<tr><td colspan="4" align="right"><table width="95%"><tr><td colspan="4"/></tr>
+				<tr bgcolor="#EEEEEE"><td class="attrName" width="50%" valign="top"><a name="attroffsetScaleZ"/>
+				<b><code>offsetScaleZ</code></b>
+				(<b><code>ofsz</code></b>)</td>
+				<td class="attrType" width="10%" valign="top">float</td>
+				<td class="attrType" width="20%" valign="top">0.0</td>
+				<td class="attrFlags" width="20%" valign="top"></td></tr>
+				<tr><td class="attrComment" colspan="4"><table width="100%"><tr><td width="5%"/><td><mayadoc-comment>
+				The z component of offsetScale
+				</mayadoc-comment></td></tr></table></td></tr></table></td></tr>
+
+
+</table>
+
+</body>
+</html>
+
